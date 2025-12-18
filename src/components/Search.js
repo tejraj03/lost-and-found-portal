@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-//import emailjs from "emailjs-com"; // ✅ import EmailJS
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com"; // ✅ import EmailJS
+//import emailjs from "@emailjs/browser";
 
 
 function Search() {
@@ -68,7 +68,7 @@ function Search() {
       section: contactForm.section,
       year: contactForm.year,
       message: contactForm.message,
-      to_email: "tp4862@srmist.edu.in", // <-- your email
+      to_email: "ap3220@srmist.edu.in", // <-- your email
     };
 
     emailjs

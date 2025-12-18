@@ -216,6 +216,10 @@ form button[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  max-height: 55vh;        /* key line */
+  overflow-y: auto;        /* enable scrolling */
+  padding-right: 6px;      /* avoids scrollbar overlap */
 }
 
 .result-item {
