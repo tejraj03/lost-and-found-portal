@@ -68,15 +68,15 @@ function Search() {
       section: contactForm.section,
       year: contactForm.year,
       message: contactForm.message,
-      to_email: "ap3220@srmist.edu.in", // <-- your email
+      to_email: "tp4862@srmist.edu.in", // <-- your email
     };
 
     emailjs
       .send(
-        "service_yh8bkl2", // ⚙️ Your EmailJS service ID
-        "template_yjflw5k", // ⚙️ Your EmailJS template ID
+        "service_p2z3mkj", // ⚙️ Your EmailJS service ID
+        "template_w33qcu3", // ⚙️ Your EmailJS template ID
         templateParams,
-        "Rj8z5rdqZOqxSjL71" // ⚙️ Your EmailJS public key
+        "WNraZhpjqeSmsOtyO" // ⚙️ Your EmailJS public key
       )
       .then(
         (response) => {
