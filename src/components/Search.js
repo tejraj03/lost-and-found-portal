@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com"; // ✅ import EmailJS
-//import emailjs from "@emailjs/browser";
 
 
 function Search() {
@@ -68,15 +67,15 @@ function Search() {
       section: contactForm.section,
       year: contactForm.year,
       message: contactForm.message,
-      to_email: "tp4862@srmist.edu.in", // <-- your email
+      to_email: process.env.REACT_APP_CONTACT_EMAIL // <-- your email
     };
 
     emailjs
       .send(
-        "service_p2z3mkj", // ⚙️ Your EmailJS service ID
-        "template_w33qcu3", // ⚙️ Your EmailJS template ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,    // ⚙️ Your EmailJS service ID
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,   // ⚙️ Your EmailJS template ID
         templateParams,
-        "WNraZhpjqeSmsOtyO" // ⚙️ Your EmailJS public key
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY     // ⚙️ Your EmailJS public key
       )
       .then(
         (response) => {
