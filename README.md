@@ -1,51 +1,49 @@
-Lost & Found Portal
+# Lost & Found Portal
 
-A web-based Lost & Found management system that allows users to upload found items, search for items, and mark items as collected.
-The frontend is built using React, and the backend is implemented using Spring Boot with a MySQL database.
+A web-based **Lost & Found management system** that allows users to upload found items, search for items, and mark items as collected.  
+The frontend is built using **React**, and the backend is implemented using **Spring Boot** with a **MySQL** database.
 
-🛠 Tech Stack
-Frontend
+---
 
-React (Create React App)
+## 🛠 Tech Stack
 
-HTML, CSS, JavaScript
+### Frontend
+- React (Create React App)
+- HTML, CSS, JavaScript
+- Fetch API
 
-Fetch API
+### Backend
+- Spring Boot
+- RESTful APIs
+- Spring Web
+- Spring Data JPA
 
-Backend
+### Database
+- MySQL
 
-Spring Boot
+---
 
-RESTful APIs
+## ✨ Features
 
-Spring Web
+- Upload found items
+- Search items by item type
+- View all available items
+- Mark items as collected
+- RESTful communication between frontend and backend
 
-Spring Data JPA
+---
 
-Database
+## 📂 Project Structure
 
-MySQL
-
-✨ Features
-
-Upload found items
-
-Search items by item type
-
-View all available items
-
-Mark items as collected
-
-RESTful communication between frontend and backend
-
-📂 Project Structure
+```text
 lost-and-found-portal/
 │
 ├── src/                # React frontend
 ├── public/
 ├── README.md
 │
-└── spring-backend/     # Spring Boot backend (separate project/workspace)
+└── backend/
+    └── lost-and-found-portal/   # Spring Boot backend
 
 🚀 Getting Started
 Prerequisites
@@ -60,12 +58,13 @@ MySQL
 
 Spring Tool Suite (STS) / Eclipse
 
+
 ▶️ Running the Application
 1️⃣ Start MySQL
 
-Create a database:
-
+Create a database: 
 CREATE DATABASE lost_and_found_portal;
+
 
 2️⃣ Run Spring Boot Backend
 
@@ -75,9 +74,10 @@ Configure MySQL credentials in application.properties
 
 Run the Spring Boot application
 
-Backend will run on:
+Backend will run at:
 
 http://localhost:8080
+
 
 3️⃣ Run React Frontend
 
@@ -87,15 +87,17 @@ npm install
 npm start
 
 
-Frontend will run on:
+Frontend will run at:
 
 http://localhost:3000
+
 
 🔗 API Endpoints (Spring Boot)
 Method	Endpoint	Description
 GET	/item/	Fetch all items
 POST	/item/save	Upload a new item
 DELETE	/item/delete/{id}	Mark item as collected
+
 🧠 Backend Dependencies
 
 The Spring Boot backend uses only the following dependencies:
@@ -116,8 +118,5 @@ The backend follows RESTful API principles
 
 Deleting an item represents marking it as collected
 
-Accessing DELETE endpoints directly from the browser may result in a 405 Method Not Allowed, which is expected behavior
-
-📜 License
-
-This project is developed for educational purposes.
+Accessing DELETE endpoints directly from the browser may result in a
+405 Method Not Allowed, which is expected behavior
