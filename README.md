@@ -120,3 +120,8 @@ Deleting an item represents marking it as collected
 
 Accessing DELETE endpoints directly from the browser may result in a
 405 Method Not Allowed, which is expected behavior
+
+
+📜 License
+
+This project is developed for educational purposes.
