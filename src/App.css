@@ -1,0 +1,393 @@
+/* ===== Global Styles ===== */
+html, body {
+  height: 100%;
+  overflow-y: hidden; /* Removes vertical scrollbar */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, rgba(6,130,165,1) 0%, rgba(34,48,86,1) 66.8%, rgba(15,23,42,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 80vh;
+  overflow-x: hidden;
+}
+
+/* ===== Hero Section (Home Page) ===== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: #11224E;
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0f7ff;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #023e8a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #caf0f8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== Footer Tagline ===== */
+.hero-footer {
+  position: absolute;
+  bottom: 20px;
+  color: #e3f2fd;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ===== Form Container ===== */
+.form-container {
+  max-width: 500px;
+  background: #e4e9ed;
+  margin: 50px auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #0f4e71;
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #094668;
+  outline: none;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  background: none;
+  border: none;
+  color: #0b4e71;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* ===== Upload Button ===== */
+form button[type="submit"] {
+  background-color: #135172;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 25px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0353a4;
+}
+
+/* ===== Search Results ===== */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-3px);
+}
+
+.result-item button {
+  background: #ef233c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.result-item button:hover {
+  background: #d90429;
+}
+
+
+
+/* ===== Contact Icon ===== */
+/* ===== Contact Icon ===== */
+.contact-icon {
+  position: fixed; /* change to fixed for guaranteed visibility */
+  bottom: 25px;
+  right: 30px;
+  font-size: 2.2rem;
+  color: rgb(21, 21, 21);
+  cursor: pointer;
+  z-index: 9999; /* VERY high — ensures it’s above overlay */
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #caf0f8;
+  transform: scale(1.1);
+}
+
+
+/* ===== Contact Modal Enhanced Styles ===== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: #1e293b; /* deep navy/gray for a modern dark look */
+  color: #f1f5f9;
+  padding: 30px 35px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.35s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.modal-content label {
+  font-weight: 500;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #f8fafc;
+  font-size: 0.95rem;
+  color: #0f172a;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+  outline: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #38bdf8;
+}
+
+/* Send Message Button */
+.modal-content button[type="submit"] {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(14, 165, 233, 0.3);
+}
+
+/* Optional: Make modal slightly larger on wide screens */
+@media (min-width: 768px) {
+  .modal-content {
+    max-width: 480px;
+  }
+}
+
