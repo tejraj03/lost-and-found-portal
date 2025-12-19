@@ -65,7 +65,7 @@ Create a database:
 
 ```sql
 CREATE DATABASE lost_and_found_portal;
-
+```
 
 ### 2️⃣ Run Spring Boot Backend
 
@@ -85,7 +85,8 @@ From the project root:
 
 ```bash
 npm install
-npm start ```
+npm start
+```
 
 
 Frontend will run at:
