@@ -35,7 +35,6 @@ The frontend is built using **React**, and the backend is implemented using **Sp
 
 ## 📂 Project Structure
 
-```text
 lost-and-found-portal/
 │
 ├── src/                # React frontend
@@ -43,48 +42,50 @@ lost-and-found-portal/
 ├── README.md
 │
 └── backend/
-    └── lost-and-found-portal/   # Spring Boot backend
+    └── lost-and-found-portal/   # Spring Boot backend 
 
-🚀 Getting Started
-Prerequisites
+---
 
+## 🚀 Getting Started
+
+### Prerequisites
 Make sure you have the following installed:
 
-Node.js & npm
+- **Node.js & npm**
+- **Java (11 or above)**
+- **MySQL**
+- **Spring Tool Suite (STS) / Eclipse**
 
-Java (11 or above)
+---
 
-MySQL
+## ▶️ Running the Application
 
-Spring Tool Suite (STS) / Eclipse
+### 1️⃣ Start MySQL
+Create a database:
 
-
-▶️ Running the Application
-1️⃣ Start MySQL
-
-Create a database: 
+```sql
 CREATE DATABASE lost_and_found_portal;
 
 
-2️⃣ Run Spring Boot Backend
+### 2️⃣ Run Spring Boot Backend
 
-Open the backend project in STS / Eclipse
+- Open the backend project in **STS / Eclipse**
+- Configure MySQL credentials in `application.properties`
+- Run the **Spring Boot application**
 
-Configure MySQL credentials in application.properties
-
-Run the Spring Boot application
 
 Backend will run at:
 
 http://localhost:8080
 
 
-3️⃣ Run React Frontend
+### 3️⃣ Run React Frontend
 
 From the project root:
 
+```bash
 npm install
-npm start
+npm start ```
 
 
 Frontend will run at:
@@ -92,36 +93,35 @@ Frontend will run at:
 http://localhost:3000
 
 
-🔗 API Endpoints (Spring Boot)
-Method	Endpoint	Description
-GET	/item/	Fetch all items
-POST	/item/save	Upload a new item
-DELETE	/item/delete/{id}	Mark item as collected
+## 🔗 API Endpoints (Spring Boot)
 
-🧠 Backend Dependencies
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | `/item/` | Fetch all items |
+| POST   | `/item/save` | Upload a new item |
+| DELETE | `/item/delete/{id}` | Mark item as collected |
+
+
+## 🧠 Backend Dependencies
 
 The Spring Boot backend uses only the following dependencies:
 
-Spring Web
+- **Spring Web**
+- **Spring Data JPA**
+- **MySQL Driver**
 
-Spring Data JPA
+**No additional frameworks or libraries are used.**
 
-MySQL Driver
+---
 
-No additional frameworks or libraries are used.
+## 📌 Notes
 
-📌 Notes
+- Each request between frontend and backend is **stateless**
+- The backend follows **RESTful API principles**
+- Deleting an item represents **marking it as collected**
+- Accessing `DELETE` endpoints directly from the browser may result in  
+  **405 Method Not Allowed**, which is expected behavior
 
-Each request between frontend and backend is stateless
+## 📜 License
 
-The backend follows RESTful API principles
-
-Deleting an item represents marking it as collected
-
-Accessing DELETE endpoints directly from the browser may result in a
-405 Method Not Allowed, which is expected behavior
-
-
-📜 License
-
-This project is developed for educational purposes.
+This project is developed for **educational purposes**.
